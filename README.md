@@ -1,31 +1,31 @@
 # Arduino-Traffic-Light
 A simple Arduino traffic light project using red, yellow, and green LEDs.
 
-int red = 9;
-int yellow = 8;
-int green = 7;
+Components
+Arduino Uno
+Red LED
+Yellow LED
+Green LED
+3 × 220Ω resistors
+Breadboard
+Jumper wires
+Wiring
 
-void setup(){
-  pinMode ( red, OUTPUT );
-  pinMode ( yellow, OUTPUT );
-  pinMode ( green, OUTPUT );
- 
-}
+LED	Arduino Pin
+🔴 Red	9
+🟡 Yellow	8
+🟢 Green	7
 
-void loop(){
-   digitalWrite ( red, HIGH );
-   digitalWrite ( yellow, LOW );
-   digitalWrite ( green, LOW );
-   delay(2000);
+Each LED should be connected to GND through its own resistor.
 
-   digitalWrite ( red, LOW );
-   digitalWrite ( yellow, HIGH );
-   digitalWrite ( green, LOW );
-   delay(2000);
+How it works
 
-   digitalWrite ( red, LOW );
-   digitalWrite ( yellow, LOW );
-   digitalWrite ( green, HIGH );
-   delay(2000);
-   
-}
+The traffic light cycles through:
+
+Red → Yellow → Green → Red
+
+Each light stays on for 2 seconds.
+
+Code
+
+The Arduino sketch is in traffic_light.ino.
